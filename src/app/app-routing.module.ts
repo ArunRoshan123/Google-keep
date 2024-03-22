@@ -7,6 +7,7 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { CreateNoteComponent } from './components/create-note/create-note.component';
 import { NotesComponent } from './components/notes/notes/notes.component';
+import { ReviewComponent } from './components/review/review.component';
 // import { AuthGuard } from './authgaurd/authgaurd.guard';
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
 },
   {path: 'createnote', component:CreateNoteComponent},
   {path: 'note', component:NotesComponent},
+  {path: 'review', component:ReviewComponent}
 ];
 
 @NgModule({

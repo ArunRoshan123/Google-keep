@@ -39,6 +39,7 @@ import { NotesComponent } from './components/notes/notes/notes.component';
 import { ToolExecuteComponent } from './components/tool-execute/tool-execute/tool-execute.component';
 import { DisplayNotesComponent } from './components/display-notes/display-notes/display-notes.component';
 import { MainComponent } from './components/main/main/main.component';
+import { ReviewComponent } from './components/review/review.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { MainComponent } from './components/main/main/main.component';
     NotesComponent,
     ToolExecuteComponent,
     DisplayNotesComponent,
-    MainComponent
+    MainComponent,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,
