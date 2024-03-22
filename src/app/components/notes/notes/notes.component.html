@@ -1,0 +1,20 @@
+<div class="container" (mouseenter)="handleHover()" (mouseleave)="handleHover()" [style.background-color]="colour">
+  <button class="top-left-button" [class.visible]="showTools" matTooltip="Select note" matTooltipShowDelay="100">
+    <i class="material-icons">check</i>
+  </button>
+  <div class="top-title" [class.visible]="showTools" [style.background-color]="colour">
+    <input type="text" class="search" [placeholder]="NoteTitle" id="Title" (click)="editdialogbox()">
+    <button class="material-symbols-outlined" id="check2" [class.visible]="showTools" matTooltip="Pin" matTooltipShowDelay="100" (click)="handlePinClick()">keep</button>
+  </div>
+  <textarea class="search" placeholder="NoteDescription" id="inner-title" (click)="editdialogbox()">{{NoteDescription}}</textarea>
+  <div class="lower" [class.visible]="showTools">
+    <app-tool-execute>
+      (reminderClicked)="handleReminderClick()"
+      (collaboratorClicked)="handleCollaboratorClick()"
+      (colorClicked)="handleColorClick()"
+      (imageClicked)="handleImageClick()"
+      (archiveClicked)="handleArchiveClick()"
+      (moreClicked)="handleMoreClick()">
+    </app-tool-execute>
+  </div>
+</div>

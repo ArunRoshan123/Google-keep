@@ -1,0 +1,41 @@
+<div class="box1">
+  <div class="box2">
+    <div class="firstdiv">
+      <img
+        src="https://pluspng.com/img-png/google-logo-png-revised-google-logo-1600.png"
+      />
+      <div class="logo">
+        <p id="logo1">
+          Create a Google <br />
+          <br />
+          Account
+        </p>
+        <p>Enter your details</p>
+      </div>
+    </div>
+    <div class="seconddiv">
+      <form [formGroup]="registerForm">
+      <div class="signin">
+        <div class="namepass">
+        <input matInput type="text" placeholder="First name*" formControlName="firstname"/>
+        <input matInput type="text" placeholder="Last name*" formControlName="lastname"/>
+        </div>
+
+        <input matInput id="emailphone" type="text" placeholder="Email*" formControlName="emailphone"/>
+
+        <div class="namepass">
+          <input matInput [type]="showpassword ? 'text' : 'password'" placeholder="Password*" formControlName="password"/>
+        </div>
+
+      </div>
+
+      <div class="check">
+        <mat-checkbox color="primary" (change)="toggleshowpassword()">Show Password</mat-checkbox>
+      </div>
+      <div class="createbutton">
+        <button (click)="RegisterSubmit()">Create</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>

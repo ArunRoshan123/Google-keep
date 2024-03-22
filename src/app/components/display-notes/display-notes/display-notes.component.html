@@ -1,0 +1,5 @@
+<div class="container">
+  <div *ngFor="let note of notesArray" class="display">
+    <app-notes [NoteId]="note.noteId" [NoteTitle]="note.noteTitle" [NoteDescription]="note.noteDescription" [colour]="note.colour"></app-notes>
+  </div>
+</div>

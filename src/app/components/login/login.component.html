@@ -1,0 +1,47 @@
+<div class="box1">
+  <div class="box2">
+    <div class="firstdiv">
+      <img src="https://pluspng.com/img-png/google-logo-png-revised-google-logo-1600.png">
+      <div class="logo">
+        <p id="logo1">Sign in</p>
+        <p>to continue to Gmail</p>
+      </div>
+    </div>
+
+    <form class="submit-form" [formGroup]="loginform">
+      <div class="seconddiv">
+        <div class="signin">
+          
+          <mat-form-field appearance="outline">
+            <mat-label>Email Address</mat-label>
+            <input matInput placeholder="Email" formControlName="email" required>
+            @if (email.invalid) {
+              <mat-error>{{getErrorMessageforemail()}}</mat-error>
+            }
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" placeholder="" formControlName="password" value=""  required>
+            <!-- @if (password.invalid) {
+              <mat-error>{{getErrorMessageforpassword()}}</mat-error>
+            } -->
+          </mat-form-field>
+        </div>
+        <div class="align">
+          <div class="check">
+            <!-- <input type="checkbox">Show password -->
+            <mat-checkbox color="primary" (change)="hide =!hide">Show Password</mat-checkbox>
+          </div>
+          <a href="http://localhost:4200/forgotpassword">Forgot Password?</a>
+        </div>
+        <div class="createref">
+          <a href="http://localhost:4200/register">Create account</a>
+        </div>
+        <div class="signinbutton">
+          <button mat-raised-button color="primary" (click)="logIn()">Sign in</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

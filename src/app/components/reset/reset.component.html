@@ -1,0 +1,26 @@
+<div class="box1">
+  <div class="box2">
+    <div class="firstdiv">
+      <img src="https://pluspng.com/img-png/google-logo-png-revised-google-logo-1600.png">
+      <div class="logo">
+        <p id="logo1">Create a strong password</p>
+        <p>Create a strong password with a mix of letters, numbers & symbols.</p>
+      </div>
+    </div>
+    <div class="seconddiv">
+      <form [formGroup]="resetForm">
+        <div class="forgotpass">
+          <input class="emailphone" matInput [type]="showpassword ? 'text' : 'password'" placeholder="New Password" formControlName="password">
+          <input class="emailphone" matInput [type]="showpassword ? 'text' : 'password'" placeholder="Confirm password" formControlName="confirmpassword">
+        </div>
+        <div class="check">
+          <!-- <input type="checkbox">Show password -->
+          <mat-checkbox color="primary" (change)="toggleshowpassword()">Show Password</mat-checkbox>
+        </div>
+        <div class="resetbutton">
+          <button (click)="ResetSubmit()">Reset</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
